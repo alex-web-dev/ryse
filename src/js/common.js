@@ -17,6 +17,15 @@ new Swiper('.reviews__list', {
   }
 });
 
+new Swiper('.explore__list', {
+  direction: 'horizontal',
+  slidesPerView: 3,
+  watchOverflow: false,
+  loop: false,
+  breakpoints: {
+  }
+});
+
 moveHeader();
 toggleScrollUp();
 
@@ -44,7 +53,6 @@ $plansTabsBtns.forEach(function($btn, index) {
     const $activeBtn = document.querySelector('.plans-tabs__btn_active');
     $activeTab.classList.remove('plans-tabs__tab_active');
     $activeBtn.classList.remove('plans-tabs__btn_active');
-    
     
     $btn.classList.add('plans-tabs__btn_active');
 

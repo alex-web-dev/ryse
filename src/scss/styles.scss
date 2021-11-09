@@ -384,7 +384,7 @@ body {
 }
 
 .features {
-    background-image: url(http://ryse.radiantthemes.com/wp-content/uploads/2019/09/seven-help-you.png);
+    background-image: url('../images/home-version-eight/features/bg.png');
     background-position: 2px 11px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -460,13 +460,11 @@ body {
     }
 
     &__list {
-        display: flex;
         margin-top: 10px;
     }
 
     &__item {
         background-color: #f8f8f8;
-        width: calc(100% / 12 * 4 - 30px);
         margin: 15px;
     }
 
@@ -560,6 +558,14 @@ body {
         color: #6a7c92;
         font-size: 13px;
     }
+}
+
+.price {
+    background-image: url('../images/home-version-eight/price/bg.png');
+    background-position: -615px 290px;
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    padding-bottom: 110px;
 }
 
 .plans {
@@ -697,6 +703,84 @@ body {
     &__item-btn {
         padding: 17px 37px 18px;
         margin-top: 30px;
+    }
+}
+
+.footer {
+    padding: 85px 0 15px;
+    background: #051442;
+
+    &__top {
+        display: flex;
+        margin: 0 -15px 50px;
+    }
+
+    &__column {
+        width: calc(100% / 12 * 4 - 30px);
+        margin: 0 15px;
+        color: #fff;
+    }
+
+    &__logo {
+        margin-top: 30px;
+        display: inline-block;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 35px;
+        margin-bottom: 22px;
+    }
+
+    &__item {
+        margin-bottom: 9px;
+    }
+
+    &__link {
+        color: #cec9ef;
+
+        &_light {
+            color: #c2d6d7;
+        }
+
+        &_contact {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__text {
+        color: #cec9ef;
+        line-height: 32px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 22px;
+        border-top: 1px solid #5448aa;
+    }
+
+    &__copyright {
+        color: #fff;
+    }
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        display: inline-block;
+        margin: 0 12px;
+
+        i {
+            color: #fff;
+        }
     }
 }
 
