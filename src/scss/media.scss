@@ -1,0 +1,20 @@
+@media screen and (max-width: 768px) {
+    .nav-menu {
+      position: relative;
+  
+      &__list {
+        position: fixed;  
+        transform: translateX(100%);
+      }
+  
+      &_active {
+        .nav-menu__list {
+          transform: translateX(0);
+        }
+      }
+    }
+    
+    .toggle-menu {
+      display: block;
+    }
+  }
