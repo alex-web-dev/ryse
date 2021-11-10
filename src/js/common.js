@@ -1,3 +1,18 @@
+import Swiper from 'swiper';
+import WOW from 'wow.js';
+
+const wowOffset = window.innerWidth > 768 ? 250 : 50
+const wow = new WOW(
+  {
+    offset:      wowOffset,
+    mobile:      true,
+    live:        true,
+    duration: 2000
+  }
+);
+
+wow.init();
+
 new Swiper('.companies__slider', {
   direction: 'horizontal',
   slidesPerView: 2,

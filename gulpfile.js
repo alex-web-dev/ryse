@@ -9,6 +9,8 @@ const cleanCss = require('gulp-clean-css');
 const gulpif = require('gulp-if');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync');
+const webpack = require('webpack-stream');
+const named = require('vinyl-named');
 
 const isDev = yargs.argv.dev;
 const isProd = !isDev;
@@ -25,9 +27,32 @@ function styles() {
 }
 
 function scripts() {
-    return src('src/js/**/*.js')
-    .pipe(dest('dist/js'));
+    return src(['src/js/common.js'])
+    .pipe(named())
+    .pipe(webpack({
+        module: {
+            rules: [
+                {
+                    test: /\.js$/,
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ["@babel/preset-env"]
+                        }
+                    }
+                }
+            ]
+        },
+        mode: isProd ? 'production' : 'development',
+        devtool: isDev ? 'inline-source-map' : false,
+        output: {
+            filename: '[name].js'
+        }
+    }))
+    .pipe(dest('dist/js'))
 }
+
+
 
 function watcher() {
     watch('src/scss/**/*.scss', series(styles));
