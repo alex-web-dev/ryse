@@ -137,6 +137,17 @@
 
     &__subcontent {
       box-shadow: none;
+      padding: 0;
+    }
+
+    &__subtitle {
+      padding-left: 30px;
+      color: #6a7c92;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      padding-bottom: 10px;
+      font-weight: 400;
+      border-bottom: 1px rgba(106, 124, 146, 0.1) solid;
     }
 
     &__subitem {
