@@ -20,6 +20,14 @@
       max-width: calc(100% - 620px);
     }
   }
+
+  .about {
+    &_comment {
+      .about__inf {
+        padding-right: 0;
+      }
+    }
+  }
 }
 
 
@@ -222,6 +230,10 @@
     &__develop {
       margin-top: 70px;
     }
+
+    &__team {
+      margin-bottom: 80px;
+    }
   }
 
   .companies {
@@ -252,7 +264,8 @@
     }
 
     &_web,
-    &_business {
+    &_business,
+    &_comment {
       .about__content > div:first-child {
         margin-right: 0;
       }
@@ -320,6 +333,39 @@
   .develop {
     &__item {
       width: calc(50% - 20px);
+    }
+  }
+
+  .callback {
+    padding-bottom: 80px;
+  }
+
+  .team {
+    &__pagination {
+      display: flex;
+    }
+  }
+
+  .callback-form {
+    &__row {
+      margin: 0;
+      &_half {
+        flex-direction: column;
+        
+
+        .callback-form__field {
+          margin: 0 0 15px;
+        }
+      }
+    }
+
+    &__field {
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    &__submit {
+      margin-top: 20px;
     }
   }
 }
@@ -416,6 +462,26 @@
       margin-right: 0;
     }
   }
+
+  .team {
+    margin-top: -50px;
+    padding-top: 80px;
+  }
+
+  .callback {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__inf,
+    &__form {
+      width: 100%;
+    }
+
+    &__inf {
+      padding-right: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -474,6 +540,10 @@
     &__develop {
       margin-top: 50px;
     }
+
+    &__team {
+      margin-bottom: 50px;
+    }
   }
 
   .companies {
@@ -528,5 +598,9 @@
     &__item {
       padding: 25px 35px;
     }
+  }
+
+  .callback {
+    padding-bottom: 50px;
   }
 }
