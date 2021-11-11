@@ -7,7 +7,7 @@
 
   .header {
     &__content {
-      padding: 20px 5px;
+      padding: 20px 0;
     }
   }
 
@@ -196,6 +196,18 @@
     &__cart-link {
       margin-left: auto;
     }
+
+    &__search-btn {
+      margin-left: 25px;
+    }
+    
+    &_index {
+      .header__menu {
+        .menu__link {
+          color: #6a7c92;
+        }
+      }
+    }
   }
 
   .main {
@@ -205,6 +217,10 @@
 
     &__about {
       margin: 70px 0;
+    }
+
+    &__develop {
+      margin-top: 70px;
     }
   }
 
@@ -222,6 +238,7 @@
       & > div:first-child {
         margin-right: 0;
         margin-bottom: 40px;
+        padding-right: 0;
       }
     }
 
@@ -232,6 +249,13 @@
 
     &__bg {
       text-align: center;
+    }
+
+    &_web,
+    &_business {
+      .about__content > div:first-child {
+        margin-right: 0;
+      }
     }
   }
 
@@ -292,6 +316,12 @@
       margin-bottom: 20px;
     }
   }
+
+  .develop {
+    &__item {
+      width: calc(50% - 20px);
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -322,6 +352,29 @@
       text-align: center;
       margin-top: 30px;
     }
+
+    &_mobile_left {
+      .banner__inf {
+        text-align: left;
+      }
+    }
+  }
+
+  .about {
+    &_web {
+      text-align: center;
+
+      .about__title3 {
+        &:after {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    &__property {
+      justify-content: center;
+    }
   }
 
   .plans-tabs {
@@ -350,9 +403,52 @@
       margin-bottom: 15px;
     }
   }
+
+  .develop {
+    &__list {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__item {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 640px) {
+  .about {
+    &__properties {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__property {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      flex-direction: column;
+    }
+
+    &__property-name {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+
+    &__features {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__feature {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   .explore {
     &__item {
       margin: 0;
@@ -364,6 +460,20 @@
   .title1 {
     font-size: 36px;
     line-height: 44px;
+  }
+
+  .main {
+    &__companies {
+      margin-top: 40px;
+    }
+
+    &__about {
+      margin: 55px 0;
+    }
+
+    &__develop {
+      margin-top: 50px;
+    }
   }
 
   .companies {
@@ -411,6 +521,12 @@
 
     &__column {
       margin-bottom: 15px;
+    }
+  }
+
+  .develop {
+    &__item {
+      padding: 25px 35px;
     }
   }
 }
