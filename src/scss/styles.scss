@@ -47,6 +47,28 @@
             transform: translateY(0);
         }
     }
+
+    &_pink {
+        background: #fe5f88;
+        padding: 14px 35px;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+
+        &:before {
+            content: '\f060';
+            font-family: "FontAwesome";
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background: #fa897d;
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    }
 }
 
 .title1,
@@ -479,6 +501,7 @@
 
 .header {
     position: absolute;
+    left: 0;
     z-index: 3;
     width: 100%;
     transition: all .4s ease-in-out;
@@ -530,7 +553,8 @@
             }
         }
 
-        .header__cart-link i {
+        .header__cart-link i,
+        .header__search-btn i {
             color: #030712;
         }
 
@@ -586,6 +610,10 @@
                 }
             }
         }
+    }
+
+    &_shadow {
+        box-shadow: rgba(0, 0, 0, .15) 0px 0px 15px;
     }
 }
 
@@ -1589,6 +1617,30 @@
     iframe {
         width: 100%;
         height: 100%;
+    }
+}
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 200px 0 130px;
+    text-align: center;
+
+    &__title {
+        margin: 5px 0 15px;
+        font-weight: 700;
+        font-size: 30px;
+        color: #181818;
+        line-height: 35px;
+    }
+
+    &__text {
+        font-size: 16px;
+        color: #737373;
+        line-height: 26px;
+        margin-bottom: 30px;
     }
 }
 
