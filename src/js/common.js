@@ -1,7 +1,8 @@
-import Swiper from 'swiper';
+import './sliders';
+import './menu';
 import WOW from 'wow.js';
 
-const wowOffset = window.innerWidth > 768 ? 250 : 50
+const wowOffset = window.innerWidth > 768 ? 250 : 50;
 const wow = new WOW(
   {
     offset:      wowOffset,
@@ -10,92 +11,13 @@ const wow = new WOW(
     duration: 2000
   }
 );
-
 wow.init();
-
-new Swiper('.companies__slider', {
-  direction: 'horizontal',
-  slidesPerView: 2,
-  spaceBetween: 20,
-  loop: true,
-  breakpoints: {
-    768: {
-      slidesPerView: 5,
-    },
-    480: {
-      slidesPerView: 3,
-    }
-  }
-});
-
-new Swiper('.reviews__list', {
-  direction: 'horizontal',
-  slidesPerView: 1,
-  loop: true,
-  breakpoints: {
-  },
-  autoplay: {
-    delay: 6000
-  }
-});
-
-new Swiper('.explore__list', {
-  direction: 'horizontal',
-  slidesPerView: 1,
-  watchOverflow: false,
-  loop: false,
-  breakpoints: {
-    992: {
-      slidesPerView: 3,
-    },
-    640: {
-      slidesPerView: 2,
-    }
-  }
-});
 
 moveHeader();
 toggleScrollUp();
 
 window.addEventListener('scroll', moveHeader);
 window.addEventListener('scroll', toggleScrollUp);
-
-const $header = document.querySelector('.header');
-const $headerMenu = $header.querySelector('.header__menu');
-const menuAdaptive = 992;
-
-const $menuToggle = $headerMenu.querySelector('.menu__toggle');
-$menuToggle.addEventListener('click', () => {
-  if (window.innerWidth > menuAdaptive) {
-    return;
-  }
-  
-  $headerMenu.classList.toggle('menu_active');
-});
-
-const $menuClose = $headerMenu.querySelector('.menu__close');
-$menuClose.addEventListener('click', () => {
-  if (window.innerWidth > menuAdaptive) {
-    return;
-  }
-  
-  $headerMenu.classList.remove('menu_active');
-});
-
-$headerMenu.addEventListener('click', (e) => {
-  if (window.innerWidth > menuAdaptive || e.target !== $headerMenu) {
-    return;
-  }
-
-  $headerMenu.classList.remove('menu_active');
-});
-
-const $menuHasChildItems = document.querySelectorAll('.menu__item_has-children');
-$menuHasChildItems.forEach(($item) => {
-  $item.addEventListener('click', () => {
-    $item.classList.toggle('menu__item_open')
-  });
-});
 
 const $scrollUp = document.querySelector('.scrollup');
 if ($scrollUp) {

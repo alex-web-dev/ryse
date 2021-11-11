@@ -81,6 +81,7 @@
       &_has-children {
         .menu__link:after {
             content: '+';
+            margin-right: 2px;
         }
       }
 
@@ -88,10 +89,7 @@
         .menu__link:after {
           content: '-';
           font-size: 24px;
-        }
-
-        .menu__submenu {
-          display: block;
+          margin-right: 0;
         }
       }
     }
@@ -120,8 +118,10 @@
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
+      transition: height .4s ease-in-out;
       padding-top: 0;
-      display: none;
+      height: 0;
+      overflow: hidden;
     }
 
     &__columns {
