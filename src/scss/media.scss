@@ -81,6 +81,7 @@
       &_has-children {
         .menu__link:after {
             content: '+';
+            margin-right: 2px;
         }
       }
 
@@ -88,10 +89,7 @@
         .menu__link:after {
           content: '-';
           font-size: 24px;
-        }
-
-        .menu__submenu {
-          display: block;
+          margin-right: 0;
         }
       }
     }
@@ -120,8 +118,10 @@
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
+      transition: height .4s ease-in-out;
       padding-top: 0;
-      display: none;
+      height: 0;
+      overflow: hidden;
     }
 
     &__columns {
@@ -137,6 +137,17 @@
 
     &__subcontent {
       box-shadow: none;
+      padding: 0;
+    }
+
+    &__subtitle {
+      padding-left: 30px;
+      color: #6a7c92;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      padding-bottom: 10px;
+      font-weight: 400;
+      border-bottom: 1px rgba(106, 124, 146, 0.1) solid;
     }
 
     &__subitem {

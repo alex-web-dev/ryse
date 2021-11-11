@@ -1,6 +1,12 @@
+@import 'mixins';
 @import 'vars';
 @import 'libs';
 @import 'base';
+@import 'fonts';
+
+.wow {
+    visibility: hidden;
+}
 
 .btn {
     color: #fff;
@@ -90,6 +96,8 @@
 
 .cart-link {
     position: relative;
+    width: 20px;
+    height: 28px;
 
     i {
         color: #1e1666;
@@ -151,6 +159,8 @@
                 content: "\f107";
                 font-family: "FontAwesome";
                 font-size: 12px;
+                height: 28px;
+                width: 10px;
             }
         }
     }
@@ -273,7 +283,6 @@
         font-size: 16px;
         color: #252525;
         line-height: 26px;
-        font-family: "Roboto";
         margin-bottom: 15px;
     }
 
@@ -441,6 +450,7 @@
 
     &__img {
         width: 550px;
+        height: auto;
     }
 }
 
@@ -477,6 +487,10 @@
 
     &__bg {
         flex: 0 0 auto;
+    }
+
+    &__img {
+        height: auto;
     }
 
     &__subtitle {
@@ -648,6 +662,10 @@
         margin: 15px;
     }
 
+    &__item-img {
+        height: auto;
+    }
+
     &__item-inf {
         padding: 25px;
     }
@@ -683,6 +701,10 @@
     &__bg {
         flex: 0 0 auto;
         max-width: 690px;
+    }
+
+    &__img {
+        height: auto;
     }
 
     &__inf {
