@@ -1,4 +1,6 @@
-import Swiper from 'swiper';
+import {Swiper, Pagination} from 'swiper';
+
+Swiper.use([Pagination]);
 
 new Swiper('.companies__slider', {
   direction: 'horizontal',
@@ -33,6 +35,33 @@ new Swiper('.explore__list', {
   loop: false,
   breakpoints: {
     992: {
+      slidesPerView: 3,
+    },
+    640: {
+      slidesPerView: 2,
+    }
+  }
+});
+
+new Swiper('.team__list', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 30,
+  watchOverflow: false,
+  loop: true,
+  autoplay: {
+    delay: 6000
+  },
+  pagination: {
+    el: '.team__pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 4,
+    },
+    768: {
       slidesPerView: 3,
     },
     640: {
