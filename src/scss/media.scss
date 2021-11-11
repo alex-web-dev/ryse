@@ -28,6 +28,12 @@
       }
     }
   }
+
+  .contacts {
+    &__inf {
+      padding-right: 50px;
+    }
+  }
 }
 
 
@@ -39,6 +45,10 @@
 
   .btn {
     padding: 10px 26px;
+
+    &_submit {
+      padding: 15px 28px;
+    }
   }
 
   .menu {
@@ -234,6 +244,15 @@
     &__team {
       margin-bottom: 80px;
     }
+
+    &__contacts {
+      margin-top: 0;
+    }
+
+    &__map {
+      margin-top: 70px;
+    }
+   
   }
 
   .companies {
@@ -365,6 +384,25 @@
     }
 
     &__submit {
+      margin-top: 20px;
+    }
+  }
+
+  .contacts {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__inf,
+    &__form {
+      width: 100%;
+    }
+
+    &__inf {
+      padding-right: 0;
+    }
+
+    &__form {
       margin-top: 20px;
     }
   }
@@ -520,6 +558,12 @@
       margin: 0;
     }
   }
+
+  .contacts {
+    &__form {
+      padding: 30px 15px;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -543,6 +587,10 @@
 
     &__team {
       margin-bottom: 50px;
+    }
+
+    &__map {
+      margin-top: 50px;
     }
   }
 
@@ -602,5 +650,9 @@
 
   .callback {
     padding-bottom: 50px;
+  }
+
+  .contacts {
+    padding-top: 60px;
   }
 }
