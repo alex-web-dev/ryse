@@ -615,6 +615,12 @@
     }
   }
 
+  .banner {
+    &_portfolio {
+      padding: 120px 0 105px;
+    }
+  }
+
   .companies {
     &__title3 {
       padding: 0;
