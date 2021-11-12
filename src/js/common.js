@@ -1,5 +1,7 @@
 import './sliders';
 import './menu';
+import './boxes-gallery';
+
 import WOW from 'wow.js';
 
 const wowOffset = window.innerWidth > 768 ? 250 : 50;
@@ -46,6 +48,24 @@ $plansTabsBtns.forEach(($btn, index) => {
     const $newActiveTab = document.querySelectorAll('.plans-tabs__tab')[index];
     $newActiveTab.classList.add('plans-tabs__tab_active');
   });
+});
+
+const $openSearchBtns = document.querySelectorAll('.search-btn');
+$openSearchBtns.forEach($btn => {
+  $btn.addEventListener('click', () => {
+    const $search = document.querySelector('.search');
+    if ($search) {
+      $search.classList.add('search_open');
+    }
+  });
+});
+
+const $searchExit = document.querySelector('.search__close');
+$searchExit.addEventListener('click', () => {
+  const $search = document.querySelector('.search');
+  if ($search) {
+    $search.classList.remove('search_open');
+  }
 });
 
 function moveHeader() {

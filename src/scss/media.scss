@@ -108,6 +108,7 @@
           content: '-';
           font-size: 24px;
           margin-right: 0;
+          line-height: 20px;
         }
       }
     }
@@ -207,6 +208,8 @@
   }
 
   .header {
+    overflow-x: hidden;
+    
     &__content {
       padding: 20px 0;
     }
@@ -251,6 +254,10 @@
 
     &__map {
       margin-top: 70px;
+    }
+
+    &__boxes {
+      margin: 70px 0 90px;
     }
    
   }
@@ -404,6 +411,12 @@
 
     &__form {
       margin-top: 20px;
+    }
+  }
+
+  .boxes {
+    &__item {
+      width: 50%;
     }
   }
 }
@@ -564,6 +577,10 @@
       padding: 30px 15px;
     }
   }
+
+  .not-found {
+    padding: 120px 0 50px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -591,6 +608,16 @@
 
     &__map {
       margin-top: 50px;
+    }
+
+    &__boxes {
+      margin: 60px 0 50px;
+    }
+  }
+
+  .banner {
+    &_portfolio {
+      padding: 120px 0 105px;
     }
   }
 
@@ -654,5 +681,32 @@
 
   .contacts {
     padding-top: 60px;
+  }
+
+  .boxes {
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .search {
+    &__content {
+      padding-right: 15px;
+    }
+
+    &__layer {
+      &:nth-child(1) {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    &__title {
+      letter-spacing: 30px;
+    }
+
+    &__close {
+      right: 15px;
+      top: 15px;
+    }
   }
 }
