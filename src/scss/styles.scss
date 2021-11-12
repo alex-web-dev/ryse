@@ -1694,10 +1694,16 @@
 
         &:hover {
             .boxes__item-type,
-            .boxes__item-link {
+            .boxes__item-link,
+            .boxes__item-btns {
                 opacity: 1;
                 visibility: visible;
                 transform: translateX(0);
+            }
+
+            .boxes__full-icon {
+                opacity: 1;
+                visibility: visible;
             }
 
             .boxes__item-img {
@@ -1753,6 +1759,59 @@
         visibility: hidden;
         opacity: 0;
         transition: opacity .2s ease-in-out .5s, visibility .2s ease-in-out .5s, transform .2s ease-in-out .5s;
+    }
+
+    &__item-btns {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transform: translateX(30px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s ease-in-out, visibility .4s ease-in-out, transform .4s ease-in-out;
+    }
+
+    &__item-btn {
+        width: 34px;
+        height: 34px;
+        text-align: center;
+        font-size: 12px;
+        color: #1e1666;
+        line-height: 32px;
+        margin-left: 10px;
+        background-color: transparent;
+        border: 1px rgba(0, 0, 0, .7) solid;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__full-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+.lg-container {
+    .lg-backdrop {
+        background-color: rgba(30, 30, 30, .9);
+    }
+    
+    .lg-item {
+        user-select: none;
+    }
+    
+    .lg-progress-bar.lg-start .lg-progress {
+        background: #ff5268;
+        height: 2px;
+        transition-timing-function: linear !important;
     }
 }
 

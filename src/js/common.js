@@ -1,5 +1,7 @@
 import './sliders';
 import './menu';
+import './boxes-gallery';
+
 import WOW from 'wow.js';
 
 const wowOffset = window.innerWidth > 768 ? 250 : 50;
