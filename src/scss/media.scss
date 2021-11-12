@@ -108,6 +108,7 @@
           content: '-';
           font-size: 24px;
           margin-right: 0;
+          line-height: 20px;
         }
       }
     }
@@ -207,6 +208,8 @@
   }
 
   .header {
+    overflow-x: hidden;
+    
     &__content {
       padding: 20px 0;
     }
