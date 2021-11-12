@@ -688,4 +688,25 @@
       width: 100%;
     }
   }
+
+  .search {
+    &__content {
+      padding-right: 15px;
+    }
+
+    &__layer {
+      &:nth-child(1) {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    &__title {
+      letter-spacing: 30px;
+    }
+
+    &__close {
+      right: 15px;
+      top: 15px;
+    }
+  }
 }

@@ -50,6 +50,24 @@ $plansTabsBtns.forEach(($btn, index) => {
   });
 });
 
+const $openSearchBtns = document.querySelectorAll('.search-btn');
+$openSearchBtns.forEach($btn => {
+  $btn.addEventListener('click', () => {
+    const $search = document.querySelector('.search');
+    if ($search) {
+      $search.classList.add('search_open');
+    }
+  });
+});
+
+const $searchExit = document.querySelector('.search__close');
+$searchExit.addEventListener('click', () => {
+  const $search = document.querySelector('.search');
+  if ($search) {
+    $search.classList.remove('search_open');
+  }
+});
+
 function moveHeader() {
   const $header = document.querySelector('.header');
 
