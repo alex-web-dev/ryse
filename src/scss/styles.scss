@@ -1813,6 +1813,41 @@
         height: 2px;
         transition-timing-function: linear !important;
     }
+
+    .lg-next:before,
+    .lg-prev:after,
+    .lg-autoplay-button:after,
+    .lg-show-autoplay .lg-autoplay-button:after,
+    .lg-toolbar .lg-close:after {
+        font-family: "FontAwesome";
+    }
+
+    .lg-next:before {
+        content: '\f30b';
+    }
+
+    .lg-prev:after {
+        content: '\f30a';
+    }
+
+    .lg-autoplay-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:after {
+            content: '\f04b'; 
+            font-size: 20px;
+        }
+    }
+
+    .lg-show-autoplay .lg-autoplay-button:after {
+        content: '\f04c'; 
+    }
+
+    .lg-toolbar .lg-close:after {
+        content: '\f00d';
+    }
 }
 
 @keyframes horizontalShake {
