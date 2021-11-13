@@ -106,9 +106,11 @@ exports.copy = copy;
 exports.clean = clean;
 exports.browsersync = browsersync;
 
-const dev = series(clean, parallel(styles, images, scripts), copy, browsersync, watcher);
+const serve = series(clean, parallel(styles, images, scripts), copy, browsersync, watcher);
+const dev = series(clean, parallel(styles, images, scripts), copy);
 const build = series(clean, parallel(styles, images, scripts), copy);
 
 exports.dev = dev;
+exports.serve = serve;
 exports.build = build;
-exports.default = dev;
+exports.default = serve;
