@@ -714,6 +714,19 @@
     &_portfolio {
         padding: 150px 0 110px;
     }
+
+    &_team {
+        padding: 150px 0 0;
+
+        .banner__inf {
+            align-self: flex-start;
+        }
+
+        .banner__img {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    }
 }
 
 .companies {
