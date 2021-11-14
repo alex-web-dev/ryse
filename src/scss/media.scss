@@ -207,9 +207,7 @@
     }
   }
 
-  .header {
-    overflow-x: hidden;
-    
+  .header {    
     &__content {
       padding: 20px 0;
     }
@@ -228,6 +226,10 @@
           color: #6a7c92;
         }
       }
+    }
+
+    &_hide {
+      overflow-x: hidden;
     }
   }
 
