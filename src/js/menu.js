@@ -1,3 +1,4 @@
+const $body = document.body;
 const $header = document.querySelector('.header');
 const $headerMenu = $header.querySelector('.header__menu');
 const menuAdaptive = 992;
@@ -9,6 +10,7 @@ $menuToggle.addEventListener('click', () => {
   }
   
   $headerMenu.classList.toggle('menu_active');
+  $body.classList.toggle('body_lock');
 });
 
 const $menuClose = $headerMenu.querySelector('.menu__close');
@@ -18,6 +20,7 @@ $menuClose.addEventListener('click', () => {
   }
   
   $headerMenu.classList.remove('menu_active');
+  $body.classList.remove('body_lock');
 });
 
 $headerMenu.addEventListener('click', (e) => {
@@ -26,6 +29,7 @@ $headerMenu.addEventListener('click', (e) => {
   }
 
   $headerMenu.classList.remove('menu_active');
+  $body.classList.remove('body_lock');
 });
 
 const $menuHasChildItems = document.querySelectorAll('.menu__item_has-children');

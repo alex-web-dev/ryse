@@ -66,7 +66,7 @@
       left: 0;
       z-index: 3;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: rgba(0,0,0,.65);
       transition: visibility .4s, opacity .4s;
       opacity: 0;
@@ -80,7 +80,7 @@
       background: #fff;
       transition: transform .5s ease-in-out;
       width: 350px;
-      height: 100%;
+      height: 100vh;
       overflow-y: auto;
       top: 0;
       right: 0;
@@ -230,6 +230,8 @@
 
     &_hide {
       overflow-x: hidden;
+      opacity: 1;
+      visibility: visible;
     }
   }
 

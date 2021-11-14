@@ -500,6 +500,12 @@
     }
 }
 
+.body {
+    &_lock {
+        overflow: hidden;
+    }
+}
+
 .header {
     position: absolute;
     left: 0;
