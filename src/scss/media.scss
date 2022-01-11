@@ -263,6 +263,10 @@
     &__boxes {
       margin: 70px 0 90px;
     }
+
+    &__about-design {
+      margin: 70px 0;
+    }
    
   }
 
@@ -293,12 +297,21 @@
       text-align: center;
     }
 
+    &__submit {
+      padding: 12px 39px;
+    }
+
     &_web,
     &_business,
-    &_comment {
+    &_comment,
+    &_design {
       .about__content > div:first-child {
         margin-right: 0;
       }
+    }
+
+    &_with_bg {
+      margin-top: -340px;
     }
   }
 
@@ -423,6 +436,12 @@
       width: 50%;
     }
   }
+
+  .portfolio {
+    &__list {
+      gap: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -466,6 +485,14 @@
   }
 
   .about {
+    &__property {
+      justify-content: center;
+    }
+
+    &__advs {
+      margin-bottom: 20px;
+    }
+
     &_web {
       text-align: center;
 
@@ -477,8 +504,9 @@
       }
     }
 
-    &__property {
-      justify-content: center;
+    &_with_bg {
+      padding-top: 270px;
+      margin-top: -200px;
     }
   }
 
@@ -539,6 +567,29 @@
 
     &__inf {
       padding-right: 0;
+    }
+  }
+
+  .design {
+    &__list {
+      margin-left: 0;
+      margin-right: 0;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin: 15px 0;
+      width: 100%;
+    }
+  }
+
+  .portfolio {
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      margin: 15px 0;
     }
   }
 }
@@ -648,6 +699,11 @@
 
     &_help {
       text-align: center;
+    }
+
+    &_with_bg {
+      padding-top: 270px;
+      margin-top: -200px;
     }
   }
 

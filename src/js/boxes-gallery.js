@@ -16,6 +16,21 @@ lightGallery($boxesList, {
   mode: 'lg-fade'
 });
 
+const $portfolioList = document.querySelector('.portfolio__list');
+lightGallery($portfolioList, {
+  speed: 500,
+  plugins: [lgAutoplay],
+  mode: 'fade',
+  selector: '.portfolio__item-btn_search',
+  download: false,
+  loop: false,
+  mousewheel: true,
+  slideShowInterval: 3000,
+  progressBar: true,
+  slideEndAnimation: false,
+  mode: 'lg-fade'
+});
+
 const $openGalleryImgBtns = document.querySelectorAll('.boxes__item-btn_open');
 $openGalleryImgBtns.forEach($btn => {
   $btn.addEventListener('click', () => {
